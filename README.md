@@ -1,7 +1,7 @@
-# timer
+# Timer
 Stupid simple Arduino timer
 
-## how to use
+## How to use
 1. Create a timer
 ```c++
 Timer MyTimer;
