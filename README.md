@@ -1,4 +1,4 @@
-# Timer
+# timer
 Stupid simple Arduino timer
 
 ## How to use
