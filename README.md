@@ -1,2 +1,2 @@
 # timer
-Stupid Simple Arduino Timer
+Stupid simple Arduino timer
