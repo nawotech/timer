@@ -1,0 +1,18 @@
+{
+    "name": "Timer",
+    "version": "1.0.0",
+    "description": "Stupid simple Arduino timer",
+    "keywords": "timer",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nawotech/timer.git"
+    },
+    "authors": [
+        {
+            "name": "Nawotech",
+            "maintainer": true
+        }
+    ],
+    "frameworks": "arduino",
+    "platforms": "*"
+}
