@@ -9,7 +9,7 @@ Timer MyTimer;
 
 2. In the main loop, add check for time passed
 ```c++
-loop()
+void loop()
 {
   if (MyTimer.time_passed(1000))
   {
