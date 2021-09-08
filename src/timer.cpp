@@ -11,7 +11,7 @@ bool Timer::time_passed(unsigned long time_ms)
     if ((unsigned long)(millis() - previous_millis) > time_ms)
     {
         Timer::reset();
-        return false;
+        return true;
     }
     return false;
 }
