@@ -52,6 +52,22 @@ void test_reset(void)
     TEST_ASSERT_TRUE(TestTmr.time_passed(100));
 }
 
+void test_get_ms(void)
+{
+    // create test timer object
+    Timer TestTmr;
+
+    When(Method(ArduinoFake(), millis)).Return(50);
+    TEST_ASSERT_EQUAL_UINT32_MESSAGE(50, TestTmr.get_ms(), "Timer returns correct ms");
+
+    // reset timer
+    When(Method(ArduinoFake(), millis)).Return(100);
+    TestTmr.reset();
+
+    When(Method(ArduinoFake(), millis)).Return(123456789);
+    TEST_ASSERT_EQUAL_UINT32_MESSAGE(123456689, TestTmr.get_ms(), "Timer returns correct ms");
+}
+
 void setUp(void)
 {
     ArduinoFakeReset();
@@ -63,6 +79,7 @@ int main(int argc, char **argv)
 
     RUN_TEST(test_time_passed);
     RUN_TEST(test_reset);
+    RUN_TEST(test_get_ms);
 
     UNITY_END();
 
