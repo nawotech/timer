@@ -23,4 +23,9 @@ void loop()
 MyTimer.reset();
 ```
 
+4. To get ms since the timer was last reset
+```c++
+uint32_t ms_since_reset = MyTimer.get_ms();
+```
+
 *That's it*
